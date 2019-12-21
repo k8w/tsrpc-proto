@@ -4,7 +4,7 @@ export class TsrpcError extends Error {
     constructor(message: string, info?: any) {
         super(message);
         this.info = info;
-        
+
         if ((Object as any).setPrototypeOf) {
             (Object as any).setPrototypeOf(this, TsrpcError.prototype);
         }
@@ -13,12 +13,15 @@ export class TsrpcError extends Error {
         }
     }
 
-    get type(): 'NetworkError' | 'ServerError' | 'ApiError'{
+    get type(): 'NetworkError' | 'ServerError' | 'ClientError' | 'ApiError' {
         if (this.info && this.info.isNetworkError) {
             return 'NetworkError';
         }
         else if (this.info && this.info.isServerError) {
             return 'ServerError';
+        }
+        else if (this.info && this.info.isClientError) {
+            return 'ClientError';
         }
         else {
             return 'ApiError';
