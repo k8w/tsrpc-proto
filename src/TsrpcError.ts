@@ -34,5 +34,8 @@ export class TsrpcError extends Error {
                 return this.info.code;
             }
         }
+        else {
+            return this.code;
+        }
     }
 }
