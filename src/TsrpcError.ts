@@ -38,7 +38,7 @@ export class TsrpcError extends Error {
             }
         }
         else {
-            return this.code;
+            return undefined;
         }
     }
 }
