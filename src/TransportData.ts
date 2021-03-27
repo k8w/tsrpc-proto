@@ -1,16 +1,35 @@
+import { uint } from 'tsbuffer-schema';
+import { TsrpcErrorType } from './TsrpcError';
+
 /**
  * 基础的数据传输单元
  */
+export interface ServerInputData {
+    serviceId: uint,
+    buffer: Uint8Array,
+
+    /** Short link don't need */
+    sn?: uint
+}
 /**
- * [ ServiceID, Buffer, SN? ]
+ * ApiRes or SendMsg
  */
-export type ServerInputData = [uint, Uint8Array, uint?];
-/**
- * ApiRes: [ ServiceID, ResBuffer, undefined, SN ] | [ ServiceID, undefined, ApiError, SN ]
- * Msg: [ ServiceID, Buffer ]
- */
-export type ServerOutputData = [uint, Uint8Array?, ApiError?, uint?];
-export interface ApiError {
-    message: string;
-    info?: any;
+export interface ServerOutputData {
+    /** Short link apiRes don't need (known in session) */
+    serviceId?: uint,
+
+    // 二选一
+    buffer?: Uint8Array,
+    error?: ErrorData,
+
+    /** Short link don't need */
+    sn?: uint
+}
+
+export interface ErrorData {
+    message: string,
+    code?: string,
+    type?: TsrpcErrorType,
+
+    [key: string]: any
 }
