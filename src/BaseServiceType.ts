@@ -1,5 +1,11 @@
 export interface BaseServiceType {
-    req: any;
-    res: any;
-    msg: any;
+    api: {
+        [apiName: string]: {
+            req: any,
+            res: any
+        }
+    }
+    msg: {
+        [msgName: string]: any
+    };
 }

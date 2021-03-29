@@ -6,15 +6,12 @@ export interface BaseServiceDef {
 }
 export interface ApiServiceDef extends BaseServiceDef {
     type: 'api';
-    req: string;
-    res: string;
     conf?: {
         [key: string]: any;
     };
 }
 export interface MsgServiceDef extends BaseServiceDef {
     type: 'msg';
-    msg: string;
     conf?: {
         [key: string]: any;
     };

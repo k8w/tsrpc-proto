@@ -18,17 +18,8 @@ export default [
                         declarationMap: false,
                         module: "esnext"
                     }
-                }
-            }),
-            terser({
-                mangle: {
-                    properties: {
-                        regex: /^_/
-                    }
                 },
-                format: {
-                    comments: /^!/
-                }
+                objectHashIgnoreUnknownHack: true
             })
         ]
     },
@@ -47,17 +38,8 @@ export default [
                         declaration: false,
                         declarationMap: false,
                         module: "esnext"
-                    }
-                }
-            }),
-            terser({
-                mangle: {
-                    properties: {
-                        regex: /^_/
-                    }
-                },
-                format: {
-                    comments: /^!/
+                    },
+                    objectHashIgnoreUnknownHack: true
                 }
             })
         ]
