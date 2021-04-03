@@ -22,7 +22,6 @@
 |  --- | --- |
 |  [ApiServiceDef](./tsrpc-proto.apiservicedef.md) |  |
 |  [BaseServiceType](./tsrpc-proto.baseservicetype.md) |  |
-|  [ITsrpcClient](./tsrpc-proto.itsrpcclient.md) |  |
 |  [Logger](./tsrpc-proto.logger.md) |  |
 |  [MsgServiceDef](./tsrpc-proto.msgservicedef.md) |  |
 |  [ServerInputData](./tsrpc-proto.serverinputdata.md) | 基础的数据传输单元 |

@@ -4,6 +4,7 @@
 
 ## ApiServiceDef interface
 
+
 <b>Signature:</b>
 
 ```typescript

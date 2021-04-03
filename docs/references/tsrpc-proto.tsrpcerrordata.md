@@ -4,6 +4,7 @@
 
 ## TsrpcErrorData interface
 
+
 <b>Signature:</b>
 
 ```typescript

@@ -4,6 +4,7 @@
 
 ## Logger interface
 
+
 <b>Signature:</b>
 
 ```typescript

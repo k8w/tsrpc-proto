@@ -4,19 +4,27 @@ export interface BaseServiceDef {
     id: number;
     name: string;
 }
+
+/** @public */
 export interface ApiServiceDef extends BaseServiceDef {
     type: 'api';
     conf?: {
         [key: string]: any;
     };
 }
+
+/** @public */
 export interface MsgServiceDef extends BaseServiceDef {
     type: 'msg';
     conf?: {
         [key: string]: any;
     };
 }
+
+/** @public */
 export type ServiceDef = ApiServiceDef | MsgServiceDef;
+
+/** @public */
 export interface ServiceProto<ServiceType extends BaseServiceType = any> {
     services: ServiceDef[];
     types: TSBufferProto;

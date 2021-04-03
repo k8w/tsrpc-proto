@@ -1,5 +1,6 @@
 import { TSBufferSchema } from "tsbuffer-schema";
 
+/** @public */
 export const TransportDataProto: {
   ServerInputData: TSBufferSchema,
   ServerOutputData: TSBufferSchema,

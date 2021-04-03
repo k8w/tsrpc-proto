@@ -2,6 +2,7 @@ import { uint } from 'tsbuffer-schema';
 
 /**
  * 基础的数据传输单元
+ * @public
  */
 export interface ServerInputData {
     serviceId: uint,
@@ -12,6 +13,7 @@ export interface ServerInputData {
 }
 /**
  * ApiRes or SendMsg
+ * @public
  */
 export interface ServerOutputData {
     // 二选一
@@ -24,6 +26,7 @@ export interface ServerOutputData {
     sn?: uint
 }
 
+/** @public */
 export interface TsrpcErrorData {
     message: string,
     type: TsrpcErrorType,
@@ -32,7 +35,10 @@ export interface TsrpcErrorData {
     [key: string]: any
 }
 
-/** 明确错误类型 */
+/** 
+ * 明确错误类型
+ * @public
+ */
 export enum TsrpcErrorType {
     /** 网络错误 */
     NetworkError = 'NetworkError',

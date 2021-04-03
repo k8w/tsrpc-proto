@@ -4,6 +4,7 @@
 
 ## ServiceProto interface
 
+
 <b>Signature:</b>
 
 ```typescript

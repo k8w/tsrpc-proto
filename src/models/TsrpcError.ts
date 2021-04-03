@@ -8,6 +8,8 @@ import { TsrpcErrorData, TsrpcErrorType } from "./TransportData";
  * @locale zhCN
  * TsrpcError 与普通 Error 的差异在于，它的错误信息会直接返回给前端，而不是像 Error 那样返回一个 “服务器内部错误”
  * 如此，我们可以通过 `throw new TsrpcError(...)` 和 `throw new Error('...')` 去更灵活的抛出异常
+ * 
+ * @public
  */
 export class TsrpcError implements TsrpcErrorData {
     message!: string;

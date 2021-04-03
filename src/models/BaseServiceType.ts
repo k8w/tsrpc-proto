@@ -1,3 +1,4 @@
+/** @public */
 export interface BaseServiceType {
     api: {
         [apiName: string]: {

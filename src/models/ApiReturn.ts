@@ -10,4 +10,6 @@ export interface ApiReturnError {
     res?: undefined,
     err: TsrpcError
 }
+
+/** @public */
 export type ApiReturn<Res> = ApiReturnSucc<Res> | ApiReturnError;
