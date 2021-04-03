@@ -1,6 +1,6 @@
 {
   "name": "tsrpc-proto",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "TSRPC service proto definition",
   "main": "index.js",
   "repository": {
