@@ -1,1 +1,0 @@
-{"version":3,"file":"TransportDataProto.d.ts","sourceRoot":"","sources":["../../src/models/TransportDataProto.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,cAAc,EAAE,MAAM,iBAAiB,CAAC;AAEjD,cAAc;AACd,eAAO,MAAM,kBAAkB,EAAE;IAC/B,eAAe,EAAE,cAAc,CAAC;IAChC,gBAAgB,EAAE,cAAc,CAAC;IACjC,CAAC,GAAG,EAAE,MAAM,GAAG,cAAc,CAAA;CAgI9B,CAAC"}

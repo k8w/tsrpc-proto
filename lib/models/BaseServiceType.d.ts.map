@@ -1,1 +1,0 @@
-{"version":3,"file":"BaseServiceType.d.ts","sourceRoot":"","sources":["../../src/models/BaseServiceType.ts"],"names":[],"mappings":"AAAA,cAAc;AACd,MAAM,WAAW,eAAe;IAC5B,GAAG,EAAE;QACD,CAAC,OAAO,EAAE,MAAM,GAAG;YACf,GAAG,EAAE,GAAG,CAAC;YACT,GAAG,EAAE,GAAG,CAAA;SACX,CAAA;KACJ,CAAA;IACD,GAAG,EAAE;QACD,CAAC,OAAO,EAAE,MAAM,GAAG,GAAG,CAAA;KACzB,CAAC;CACL"}
