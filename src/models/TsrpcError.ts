@@ -1,15 +1,14 @@
 import { TsrpcErrorData, TsrpcErrorType } from "./TransportData";
 
 /**
- * TSRPC Error
- * It means this error would be return to frontend directly
- * If a error is throwed during API, but not TSRPC Error, then another internal server error would be returned
+ * A unified Error that returned by TSRPC server or client
  * 
- * @locale zhCN
- * TsrpcError 与普通 Error 的差异在于，它的错误信息会直接返回给前端，而不是像 Error 那样返回一个 “服务器内部错误”
- * 如此，我们可以通过 `throw new TsrpcError(...)` 和 `throw new Error('...')` 去更灵活的抛出异常
+ * @remarks
+ * It has many uses, for example:
  * 
- * @public
+ * 1. You can handle business errors and network errors uniformly.
+ * 2. In API handle process, `throw new TsrpcError('xxx')` would return the same error to client directly (like `call.error()`),
+ * while `throw new Error('XXX')` would return a unified "Server Internal Error".
  */
 export class TsrpcError implements TsrpcErrorData {
     message!: string;
@@ -31,6 +30,6 @@ export class TsrpcError implements TsrpcErrorData {
     }
 
     toString() {
-        return `[TSRPC] ${this.type}: ${this.message}`;
+        return `[TSRPC ${this.type}]: ${this.message}`;
     }
 }

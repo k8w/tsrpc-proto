@@ -1,32 +1,32 @@
 import { uint } from 'tsbuffer-schema';
 
 /**
- * 基础的数据传输单元
- * @public
+ * Basic transport data unit,
+ * which represents data that server received, which should be sent by `client.callApi` or `client.sendMsg`.
  */
 export interface ServerInputData {
     serviceId: uint,
     buffer: Uint8Array,
 
-    /** Short link don't need */
+    /** Short link don't need this */
     sn?: uint
 }
 /**
- * ApiRes or SendMsg
- * @public
+ * Basic transport data unit,
+ * which represents data that server sent by `call.succ` or `call.error` or `conn.sendMsg`.
  */
 export interface ServerOutputData {
-    // 二选一
+    /** ApiResponse or Msg */
     buffer?: Uint8Array,
+    /** Api Error, cannot exists at the same time with `buffer` */
     error?: TsrpcErrorData,
 
-    /** Short link apiRes don't need (known in session) */
+    /** Short link apiRes don't need this */
     serviceId?: uint,
-    /** Short link don't need */
+    /** Short link don't need this */
     sn?: uint
 }
 
-/** @public */
 export interface TsrpcErrorData {
     message: string,
     type: TsrpcErrorType,
@@ -35,17 +35,26 @@ export interface TsrpcErrorData {
     [key: string]: any
 }
 
-/** 
- * 明确错误类型
- * @public
- */
 export enum TsrpcErrorType {
-    /** 网络错误 */
+    /** Network error, like connection broken, network timeout, etc. */
     NetworkError = 'NetworkError',
-    /** 服务器内部异常（不适宜抛给客户端的错误信息） */
+    /** 
+     * Server exception, for example "request format error", "database exception", etc.
+     * 
+     * @remarks
+     * This error message may be not suitable to show to user,
+     * but the error info is useful for engineer to find some bug.
+     * So you can show a user-friendly message to user (like "System error, please contact XXX"),
+     * and report some debug info at the same time.
+     */
     ServerError = 'ServerError',
-    /** 客户端异常（如解析服务端返回失败等） */
+    /** Client exception, for example parse server output error. 
+     * (May because of the proto file is not the same between server and client)
+     */
     ClientError = 'ClientError',
-    /** 业务错误（API中返回的） */
+    /**
+     * The business error returned by `call.error`.
+     * It is always business-relatived, for example `call.error('Password is incorrect')`, `call.error('Not enough credit')`, etc.
+     */
     ApiError = 'ApiError',
 }

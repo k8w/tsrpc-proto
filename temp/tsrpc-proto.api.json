@@ -1,9 +1,163 @@
 {
   "metadata": {
     "toolPackage": "@microsoft/api-extractor",
-    "toolVersion": "7.13.2",
-    "schemaVersion": 1003,
-    "oldestForwardsCompatibleVersion": 1001
+    "toolVersion": "7.15.0",
+    "schemaVersion": 1004,
+    "oldestForwardsCompatibleVersion": 1001,
+    "tsdocConfig": {
+      "$schema": "https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json",
+      "noStandardTags": true,
+      "tagDefinitions": [
+        {
+          "tagName": "@alpha",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@beta",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@defaultValue",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@decorator",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@deprecated",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@eventProperty",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@example",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@experimental",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@inheritDoc",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@internal",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@label",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@link",
+          "syntaxKind": "inline",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@override",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@packageDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@param",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@privateRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@public",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@readonly",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@remarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@returns",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@sealed",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@see",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@throws",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@typeParam",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@virtual",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@betaDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@internalRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@preapproved",
+          "syntaxKind": "modifier"
+        }
+      ],
+      "supportForTags": {
+        "@alpha": true,
+        "@beta": true,
+        "@defaultValue": true,
+        "@decorator": true,
+        "@deprecated": true,
+        "@eventProperty": true,
+        "@example": true,
+        "@experimental": true,
+        "@inheritDoc": true,
+        "@internal": true,
+        "@label": true,
+        "@link": true,
+        "@override": true,
+        "@packageDocumentation": true,
+        "@param": true,
+        "@privateRemarks": true,
+        "@public": true,
+        "@readonly": true,
+        "@remarks": true,
+        "@returns": true,
+        "@sealed": true,
+        "@see": true,
+        "@throws": true,
+        "@typeParam": true,
+        "@virtual": true,
+        "@betaDocumentation": true,
+        "@internalRemarks": true,
+        "@preapproved": true
+      }
+    }
   },
   "kind": "Package",
   "canonicalReference": "tsrpc-proto!",
@@ -16,57 +170,9 @@
       "name": "",
       "members": [
         {
-          "kind": "TypeAlias",
-          "canonicalReference": "tsrpc-proto!ApiReturn:type",
-          "docComment": "/**\n * @public\n */\n",
-          "excerptTokens": [
-            {
-              "kind": "Content",
-              "text": "export declare type ApiReturn<Res> = "
-            },
-            {
-              "kind": "Reference",
-              "text": "ApiReturnSucc",
-              "canonicalReference": "tsrpc-proto!ApiReturnSucc:interface"
-            },
-            {
-              "kind": "Content",
-              "text": "<Res> | "
-            },
-            {
-              "kind": "Reference",
-              "text": "ApiReturnError",
-              "canonicalReference": "tsrpc-proto!ApiReturnError:interface"
-            },
-            {
-              "kind": "Content",
-              "text": ";"
-            }
-          ],
-          "releaseTag": "Public",
-          "name": "ApiReturn",
-          "typeParameters": [
-            {
-              "typeParameterName": "Res",
-              "constraintTokenRange": {
-                "startIndex": 0,
-                "endIndex": 0
-              },
-              "defaultTypeTokenRange": {
-                "startIndex": 0,
-                "endIndex": 0
-              }
-            }
-          ],
-          "typeTokenRange": {
-            "startIndex": 1,
-            "endIndex": 4
-          }
-        },
-        {
           "kind": "Interface",
           "canonicalReference": "tsrpc-proto!ApiServiceDef:interface",
-          "docComment": "/**\n * @public\n */\n",
+          "docComment": "/**\n * @remarks\n *\n * SchemaId of request and ressponse is generated by client, named with the prefix `Req` or `Res`.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -88,7 +194,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "tsrpc-proto!ApiServiceDef#conf:member",
-              "docComment": "",
+              "docComment": "/**\n * Auto generated by `tsrpc-cli`\n *\n * @example\n * ```ts title=\"PtlAddComment.ts\"\n * export interface ReqAddComment {\n *     articleId: string;\n *     comment: string;\n * }\n *\n * export interface ResAddComment {\n *     commentId: string;\n * }\n *\n * // This would be auto generated to `service.conf`\n * export const conf = {\n *     needLogin: true,\n *     needRoles: ['SuperAdmin', 'ArticleAdmin', 'CommentAdmin']\n * };\n * ```\n *\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -147,8 +253,76 @@
         },
         {
           "kind": "Interface",
+          "canonicalReference": "tsrpc-proto!BaseServiceDef:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface BaseServiceDef "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "BaseServiceDef",
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tsrpc-proto!BaseServiceDef#id:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "id: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "id",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tsrpc-proto!BaseServiceDef#name:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "name: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "name",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
           "canonicalReference": "tsrpc-proto!BaseServiceType:interface",
-          "docComment": "/**\n * @public\n */\n",
+          "docComment": "",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -161,7 +335,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "tsrpc-proto!BaseServiceType#api:member",
-              "docComment": "",
+              "docComment": "/**\n * Send a request, and wait for a response\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -187,7 +361,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "tsrpc-proto!BaseServiceType#msg:member",
-              "docComment": "",
+              "docComment": "/**\n * Msg service, listen or send one-way msg without response\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -216,7 +390,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "tsrpc-proto!Logger:interface",
-          "docComment": "/**\n * @public\n */\n",
+          "docComment": "/**\n * An abstract logger interface, which can be used to customize log behaviour. Usually, you can pass `console` for convinience. Or you can write your own logger, for example, to report to a log system, or hide some log output.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -408,7 +582,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "tsrpc-proto!MsgServiceDef:interface",
-          "docComment": "/**\n * @public\n */\n",
+          "docComment": "",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -490,7 +664,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "tsrpc-proto!ServerInputData:interface",
-          "docComment": "/**\n * 基础的数据传输单元\n *\n * @public\n */\n",
+          "docComment": "/**\n * Basic transport data unit, which represents data that server received, which should be sent by `client.callApi` or `client.sendMsg`.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -557,7 +731,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "tsrpc-proto!ServerInputData#sn:member",
-              "docComment": "/**\n * Short link don't need\n */\n",
+              "docComment": "/**\n * Short link don't need this\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -587,7 +761,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "tsrpc-proto!ServerOutputData:interface",
-          "docComment": "/**\n * ApiRes or SendMsg\n *\n * @public\n */\n",
+          "docComment": "/**\n * Basic transport data unit, which represents data that server sent by `call.succ` or `call.error` or `conn.sendMsg`.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -600,7 +774,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "tsrpc-proto!ServerOutputData#buffer:member",
-              "docComment": "",
+              "docComment": "/**\n * ApiResponse or Msg\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -627,7 +801,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "tsrpc-proto!ServerOutputData#error:member",
-              "docComment": "",
+              "docComment": "/**\n * Api Error, cannot exists at the same time with `buffer`\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -654,7 +828,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "tsrpc-proto!ServerOutputData#serviceId:member",
-              "docComment": "/**\n * Short link apiRes don't need (known in session)\n */\n",
+              "docComment": "/**\n * Short link apiRes don't need this\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -681,7 +855,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "tsrpc-proto!ServerOutputData#sn:member",
-              "docComment": "/**\n * Short link don't need\n */\n",
+              "docComment": "/**\n * Short link don't need this\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -711,7 +885,7 @@
         {
           "kind": "TypeAlias",
           "canonicalReference": "tsrpc-proto!ServiceDef:type",
-          "docComment": "/**\n * @public\n */\n",
+          "docComment": "",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -746,7 +920,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "tsrpc-proto!ServiceProto:interface",
-          "docComment": "/**\n * @public\n */\n",
+          "docComment": "/**\n * TSRPC Server Protocol Definitions\n *\n * @typeParam ServiceType - API request and response types, and Msg types.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -793,7 +967,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "tsrpc-proto!ServiceProto#__SERVICE_TYPE__:member",
-              "docComment": "",
+              "docComment": "/**\n * For IntelliSense in VSCode\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -819,7 +993,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "tsrpc-proto!ServiceProto#services:member",
-              "docComment": "",
+              "docComment": "/**\n * Service is the basic interactive unit for server and client. Include {@link ApiServiceDef} and {@link MsgServiceDef}.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -850,7 +1024,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "tsrpc-proto!ServiceProto#types:member",
-              "docComment": "",
+              "docComment": "/**\n * `TSBufferProto` that includes all types used by the services.\n *\n * @see\n *\n * {@link tsbuffer-schema#TSBufferProto | TSBufferProto} {@link tsbuffer-schema#TSBufferSchema | TSBufferSchema}\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -880,7 +1054,7 @@
         {
           "kind": "Variable",
           "canonicalReference": "tsrpc-proto!TransportDataProto:var",
-          "docComment": "/**\n * @public\n */\n",
+          "docComment": "",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -928,7 +1102,7 @@
         {
           "kind": "Class",
           "canonicalReference": "tsrpc-proto!TsrpcError:class",
-          "docComment": "/**\n * TSRPC Error It means this error would be return to frontend directly If a error is throwed during API, but not TSRPC Error, then another internal server error would be returned\n *\n * @locale zhCN TsrpcError 与普通 Error 的差异在于，它的错误信息会直接返回给前端，而不是像 Error 那样返回一个 “服务器内部错误” 如此，我们可以通过 `throw new TsrpcError(...)` 和 `throw new Error('...')` 去更灵活的抛出异常\n *\n * @public\n */\n",
+          "docComment": "/**\n * A unified Error that returned by TSRPC server or client\n *\n * @remarks\n *\n * It has many uses, for example:\n *\n * 1. You can handle business errors and network errors uniformly. 2. In API handle process, `throw new TsrpcError('xxx')` would return the same error to client directly (like `call.error()`), while `throw new Error('XXX')` would return a unified \"Server Internal Error\".\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -1201,7 +1375,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "tsrpc-proto!TsrpcErrorData:interface",
-          "docComment": "/**\n * @public\n */\n",
+          "docComment": "",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -1338,7 +1512,7 @@
         {
           "kind": "Enum",
           "canonicalReference": "tsrpc-proto!TsrpcErrorType:enum",
-          "docComment": "/**\n * 明确错误类型\n *\n * @public\n */\n",
+          "docComment": "",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -1351,7 +1525,7 @@
             {
               "kind": "EnumMember",
               "canonicalReference": "tsrpc-proto!TsrpcErrorType.ApiError:member",
-              "docComment": "/**\n * 业务错误（API中返回的）\n */\n",
+              "docComment": "/**\n * The business error returned by `call.error`. It is always business-relatived, for example `call.error('Password is incorrect')`, `call.error('Not enough credit')`, etc.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -1372,7 +1546,7 @@
             {
               "kind": "EnumMember",
               "canonicalReference": "tsrpc-proto!TsrpcErrorType.ClientError:member",
-              "docComment": "/**\n * 客户端异常（如解析服务端返回失败等）\n */\n",
+              "docComment": "/**\n * Client exception, for example parse server output error. (May because of the proto file is not the same between server and client)\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -1393,7 +1567,7 @@
             {
               "kind": "EnumMember",
               "canonicalReference": "tsrpc-proto!TsrpcErrorType.NetworkError:member",
-              "docComment": "/**\n * 网络错误\n */\n",
+              "docComment": "/**\n * Network error, like connection broken, network timeout, etc.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -1414,7 +1588,7 @@
             {
               "kind": "EnumMember",
               "canonicalReference": "tsrpc-proto!TsrpcErrorType.ServerError:member",
-              "docComment": "/**\n * 服务器内部异常（不适宜抛给客户端的错误信息）\n */\n",
+              "docComment": "/**\n * Server exception, for example \"request format error\", \"database exception\", etc.\n *\n * @remarks\n *\n * This error message may be not suitable to show to user, but the error info is useful for engineer to find some bug. So you can show a user-friendly message to user (like \"System error, please contact XXX\"), and report some debug info at the same time.\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
