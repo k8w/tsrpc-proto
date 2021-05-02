@@ -170,9 +170,259 @@
       "name": "",
       "members": [
         {
+          "kind": "TypeAlias",
+          "canonicalReference": "tsrpc-proto!ApiReturn:type",
+          "docComment": "/**\n * The return of `client.callApi()`\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type ApiReturn<Res> = "
+            },
+            {
+              "kind": "Reference",
+              "text": "ApiReturnSucc",
+              "canonicalReference": "tsrpc-proto!ApiReturnSucc:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<Res> | "
+            },
+            {
+              "kind": "Reference",
+              "text": "ApiReturnError",
+              "canonicalReference": "tsrpc-proto!ApiReturnError:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "ApiReturn",
+          "typeParameters": [
+            {
+              "typeParameterName": "Res",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "tsrpc-proto!ApiReturnError:interface",
+          "docComment": "/**\n * Unified error, include network error, business error, code exception etc.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface ApiReturnError "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "ApiReturnError",
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tsrpc-proto!ApiReturnError#err:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "err: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TsrpcError",
+                  "canonicalReference": "tsrpc-proto!TsrpcError:class"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "err",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tsrpc-proto!ApiReturnError#isSucc:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "isSucc: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "false"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "isSucc",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tsrpc-proto!ApiReturnError#res:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "res?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "undefined"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "res",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "tsrpc-proto!ApiReturnSucc:interface",
+          "docComment": "/**\n * Successful by `call.succ()`\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface ApiReturnSucc<Res> "
+            }
+          ],
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "Res",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "name": "ApiReturnSucc",
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tsrpc-proto!ApiReturnSucc#err:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "err?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "undefined"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "err",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tsrpc-proto!ApiReturnSucc#isSucc:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "isSucc: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "true"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "isSucc",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tsrpc-proto!ApiReturnSucc#res:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "res: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "Res"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "res",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
           "kind": "Interface",
           "canonicalReference": "tsrpc-proto!ApiServiceDef:interface",
-          "docComment": "/**\n * @remarks\n *\n * SchemaId of request and ressponse is generated by client, named with the prefix `Req` or `Res`.\n */\n",
+          "docComment": "/**\n * Send request and wait for response\n *\n * @remarks\n *\n * SchemaId of request and ressponse is generated by client, named with the prefix `Req` or `Res`.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -322,7 +572,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "tsrpc-proto!BaseServiceType:interface",
-          "docComment": "",
+          "docComment": "/**\n * API service request and response type, and Msg service type. For coding auto hint.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -390,7 +640,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "tsrpc-proto!Logger:interface",
-          "docComment": "/**\n * An abstract logger interface, which can be used to customize log behaviour. Usually, you can pass `console` for convinience. Or you can write your own logger, for example, to report to a log system, or hide some log output.\n */\n",
+          "docComment": "/**\n * An abstract logger interface, which can be used to customize log behaviour. Usually, you can pass `console` for convinience. Or you can write your own implementation, for example, to report to a log system, or hide some log output.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -582,7 +832,7 @@
         {
           "kind": "Interface",
           "canonicalReference": "tsrpc-proto!MsgServiceDef:interface",
-          "docComment": "",
+          "docComment": "/**\n * Send or listen specific data, without waiting for response.\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -1155,7 +1405,7 @@
             {
               "kind": "Constructor",
               "canonicalReference": "tsrpc-proto!TsrpcError:constructor(2)",
-              "docComment": "/**\n * Constructs a new instance of the `TsrpcError` class\n */\n",
+              "docComment": "/**\n * The `type` is `ApiError` by default\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -1438,7 +1688,12 @@
                 },
                 {
                   "kind": "Content",
-                  "text": "string"
+                  "text": "string | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "int",
+                  "canonicalReference": "tsbuffer-schema!int:type"
                 },
                 {
                   "kind": "Content",
@@ -1450,7 +1705,7 @@
               "name": "code",
               "propertyTypeTokenRange": {
                 "startIndex": 1,
-                "endIndex": 2
+                "endIndex": 3
               }
             },
             {
@@ -1482,7 +1737,7 @@
             {
               "kind": "PropertySignature",
               "canonicalReference": "tsrpc-proto!TsrpcErrorData#type:member",
-              "docComment": "",
+              "docComment": "/**\n * @defaultValue\n *\n * ApiError\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",

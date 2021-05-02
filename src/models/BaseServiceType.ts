@@ -1,4 +1,7 @@
-/** @public */
+/**
+ * API service request and response type, and Msg service type.
+ * For coding auto hint.
+ */
 export interface BaseServiceType {
     /** Send a request, and wait for a response */
     api: {

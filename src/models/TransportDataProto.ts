@@ -1,6 +1,5 @@
 import { TSBufferSchema } from "tsbuffer-schema";
 
-/** @public */
 export const TransportDataProto: {
   ServerInputData: TSBufferSchema,
   ServerOutputData: TSBufferSchema,
@@ -99,7 +98,22 @@ export const TransportDataProto: {
         "id": 2,
         "name": "code",
         "type": {
-          "type": "String"
+          "type": "Union",
+          "members": [
+            {
+              "id": 0,
+              "type": {
+                "type": "String"
+              }
+            },
+            {
+              "id": 1,
+              "type": {
+                "type": "Number",
+                "scalarType": "int"
+              }
+            }
+          ]
         },
         "optional": true
       }

@@ -17,6 +17,9 @@ export class TsrpcError implements TsrpcErrorData {
     [key: string]: any;
 
     constructor(data: TsrpcErrorData);
+    /**
+     * The `type` is `ApiError` by default
+     */
     constructor(message: string, data?: Partial<TsrpcErrorData>);
     constructor(dataOrMessage: TsrpcErrorData | string, data?: Partial<TsrpcErrorData>) {
         if (typeof dataOrMessage === 'string') {

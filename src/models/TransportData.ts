@@ -1,4 +1,4 @@
-import { uint } from 'tsbuffer-schema';
+import { int, uint } from 'tsbuffer-schema';
 
 /**
  * Basic transport data unit,
@@ -29,8 +29,11 @@ export interface ServerOutputData {
 
 export interface TsrpcErrorData {
     message: string,
+    /**
+     * @defaultValue ApiError
+     */
     type: TsrpcErrorType,
-    code?: string,
+    code?: string | int,
 
     [key: string]: any
 }
