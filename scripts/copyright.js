@@ -1,7 +1,7 @@
 module.exports = `/*!
  * TSRPC Proto v${require('../package.json').version}
  * -----------------------------------------
- * MIT LICENSE
- * KingWorks (C) Copyright ${new Date().getFullYear()}
+ * Copyright (c) Kingworks Corporation.
+ * MIT License
  * https://github.com/k8w/tsrpc-proto
  */`
