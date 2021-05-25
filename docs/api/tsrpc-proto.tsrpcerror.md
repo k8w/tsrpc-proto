@@ -30,7 +30,7 @@ It has many uses, for example:
 
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
-|  [code?](./tsrpc-proto.tsrpcerror.code.md) |  | string | <i>(Optional)</i> |
+|  [code?](./tsrpc-proto.tsrpcerror.code.md) |  | string \| int | <i>(Optional)</i> |
 |  [message](./tsrpc-proto.tsrpcerror.message.md) |  | string |  |
 |  [type](./tsrpc-proto.tsrpcerror.type.md) |  | [TsrpcErrorType](./tsrpc-proto.tsrpcerrortype.md) |  |
 

@@ -1,3 +1,4 @@
+import { int } from "tsbuffer-schema";
 import { TsrpcErrorData, TsrpcErrorType } from "./TransportData";
 
 /**
@@ -13,7 +14,7 @@ import { TsrpcErrorData, TsrpcErrorType } from "./TransportData";
 export class TsrpcError implements TsrpcErrorData {
     message!: string;
     type!: TsrpcErrorType;
-    code?: string;
+    code?: string | int;
     [key: string]: any;
 
     constructor(data: TsrpcErrorData);

@@ -1514,7 +1514,12 @@
                 },
                 {
                   "kind": "Content",
-                  "text": "string"
+                  "text": "string | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "int",
+                  "canonicalReference": "tsbuffer-schema!int:type"
                 },
                 {
                   "kind": "Content",
@@ -1526,7 +1531,7 @@
               "name": "code",
               "propertyTypeTokenRange": {
                 "startIndex": 1,
-                "endIndex": 2
+                "endIndex": 3
               },
               "isStatic": false
             },
