@@ -12,6 +12,8 @@ import { TsrpcErrorData, TsrpcErrorType } from "./TransportData";
  * while `throw new Error('XXX')` would return a unified "Server Internal Error".
  */
 export class TsrpcError implements TsrpcErrorData {
+    static Type = TsrpcErrorType;
+
     message!: string;
     type!: TsrpcErrorType;
     code?: string | int;
