@@ -1618,6 +1618,38 @@
                 "endIndex": 2
               },
               "isStatic": false
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "tsrpc-proto!TsrpcError.Type:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "static Type: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "typeof "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TsrpcErrorType",
+                  "canonicalReference": "tsrpc-proto!TsrpcErrorType:enum"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "Type",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              },
+              "isStatic": true
             }
           ],
           "implementsTokenRanges": [
