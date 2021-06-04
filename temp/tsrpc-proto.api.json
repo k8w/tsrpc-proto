@@ -1297,6 +1297,32 @@
                 "startIndex": 1,
                 "endIndex": 2
               }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "tsrpc-proto!ServiceProto#version:member",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "version?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "version",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
             }
           ],
           "extendsTokenRanges": []

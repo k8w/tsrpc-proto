@@ -19,4 +19,5 @@ export interface ServiceProto<ServiceType extends BaseServiceType = any>
 |  [\_\_SERVICE\_TYPE\_\_?](./tsrpc-proto.serviceproto.__service_type__.md) | ServiceType | <i>(Optional)</i> For IntelliSense in VSCode |
 |  [services](./tsrpc-proto.serviceproto.services.md) | [ServiceDef](./tsrpc-proto.servicedef.md)<!-- -->\[\] | Service is the basic interactive unit for server and client. Include [ApiServiceDef](./tsrpc-proto.apiservicedef.md) and [MsgServiceDef](./tsrpc-proto.msgservicedef.md)<!-- -->. |
 |  [types](./tsrpc-proto.serviceproto.types.md) | TSBufferProto | <code>TSBufferProto</code> that includes all types used by the services. |
+|  [version?](./tsrpc-proto.serviceproto.version.md) | number | <i>(Optional)</i> |
 
