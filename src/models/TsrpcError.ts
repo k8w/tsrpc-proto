@@ -1,5 +1,6 @@
 import { int } from "tsbuffer-schema";
 import { TsrpcErrorData, TsrpcErrorType } from "./TransportData";
+import { __assign } from "tslib";
 
 /**
  * A unified Error that returned by TSRPC server or client
@@ -28,10 +29,10 @@ export class TsrpcError implements TsrpcErrorData {
         if (typeof dataOrMessage === 'string') {
             this.message = dataOrMessage;
             this.type = data?.type ?? TsrpcErrorType.ApiError;
-            Object.assign(this, data);
+            __assign(this, data);
         }
         else {
-            Object.assign(this, dataOrMessage);
+            __assign(this, dataOrMessage);
         }
     }
 

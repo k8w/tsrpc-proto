@@ -19,7 +19,8 @@ export default [
                 },
                 objectHashIgnoreUnknownHack: true
             })
-        ]
+        ],
+        external: ['tslib']
     },
     {
         input: './src/index.ts',
@@ -39,6 +40,7 @@ export default [
                     objectHashIgnoreUnknownHack: true
                 }
             })
-        ]
+        ],
+        external: ['tslib']
     }
 ]
