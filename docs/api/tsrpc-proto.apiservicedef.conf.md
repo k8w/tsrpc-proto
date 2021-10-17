@@ -32,6 +32,5 @@ export const conf = {
     needLogin: true,
     needRoles: ['SuperAdmin', 'ArticleAdmin', 'CommentAdmin']
 };
-
 ```
 
