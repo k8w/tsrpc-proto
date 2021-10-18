@@ -1,6 +1,6 @@
 {
   "name": "tsrpc-proto",
-  "version": "1.3.6",
+  "version": "1.3.7",
   "description": "TSRPC service proto definition",
   "main": "index.cjs",
   "exports": {
@@ -33,7 +33,7 @@
     "rollup-plugin-typescript2": "^0.30.0",
     "typescript": "^4.4.4"
   },
-  "dependencies": {
+  "peerDependencies": {
     "tsbuffer-schema": "~2.0.6"
   }
 }
