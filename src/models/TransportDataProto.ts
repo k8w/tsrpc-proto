@@ -1,4 +1,4 @@
-import { TSBufferSchema } from "tsbuffer-schema";
+import { SchemaType, TSBufferSchema } from "tsbuffer-schema";
 
 export const TransportDataProto: {
   ServerInputData: TSBufferSchema,
@@ -6,13 +6,13 @@ export const TransportDataProto: {
   [key: string]: TSBufferSchema
 } = {
   "ServerInputData": {
-    "type": "Interface",
+    "type": SchemaType.Interface,
     "properties": [
       {
         "id": 0,
         "name": "serviceId",
         "type": {
-          "type": "Number",
+          "type": SchemaType.Number,
           "scalarType": "uint"
         }
       },
@@ -20,7 +20,7 @@ export const TransportDataProto: {
         "id": 1,
         "name": "buffer",
         "type": {
-          "type": "Buffer",
+          "type": SchemaType.Buffer,
           "arrayType": "Uint8Array"
         }
       },
@@ -28,7 +28,7 @@ export const TransportDataProto: {
         "id": 2,
         "name": "sn",
         "type": {
-          "type": "Number",
+          "type": SchemaType.Number,
           "scalarType": "uint"
         },
         "optional": true
@@ -36,13 +36,13 @@ export const TransportDataProto: {
     ]
   },
   "ServerOutputData": {
-    "type": "Interface",
+    "type": SchemaType.Interface,
     "properties": [
       {
         "id": 0,
         "name": "buffer",
         "type": {
-          "type": "Buffer",
+          "type": SchemaType.Buffer,
           "arrayType": "Uint8Array"
         },
         "optional": true
@@ -51,7 +51,7 @@ export const TransportDataProto: {
         "id": 1,
         "name": "error",
         "type": {
-          "type": "Reference",
+          "type": SchemaType.Reference,
           "target": "TsrpcErrorData"
         },
         "optional": true
@@ -60,7 +60,7 @@ export const TransportDataProto: {
         "id": 2,
         "name": "serviceId",
         "type": {
-          "type": "Number",
+          "type": SchemaType.Number,
           "scalarType": "uint"
         },
         "optional": true
@@ -69,7 +69,7 @@ export const TransportDataProto: {
         "id": 3,
         "name": "sn",
         "type": {
-          "type": "Number",
+          "type": SchemaType.Number,
           "scalarType": "uint"
         },
         "optional": true
@@ -77,20 +77,20 @@ export const TransportDataProto: {
     ]
   },
   "TsrpcErrorData": {
-    "type": "Interface",
+    "type": SchemaType.Interface,
     "properties": [
       {
         "id": 0,
         "name": "message",
         "type": {
-          "type": "String"
+          "type": SchemaType.String
         }
       },
       {
         "id": 1,
         "name": "type",
         "type": {
-          "type": "Reference",
+          "type": SchemaType.Reference,
           "target": "TsrpcErrorType"
         }
       },
@@ -98,18 +98,18 @@ export const TransportDataProto: {
         "id": 2,
         "name": "code",
         "type": {
-          "type": "Union",
+          "type": SchemaType.Union,
           "members": [
             {
               "id": 0,
               "type": {
-                "type": "String"
+                "type": SchemaType.String
               }
             },
             {
               "id": 1,
               "type": {
-                "type": "Number",
+                "type": SchemaType.Number,
                 "scalarType": "int"
               }
             }
@@ -121,12 +121,12 @@ export const TransportDataProto: {
     "indexSignature": {
       "keyType": "String",
       "type": {
-        "type": "Any"
+        "type": SchemaType.Any
       }
     }
   },
   "TsrpcErrorType": {
-    "type": "Enum",
+    "type": SchemaType.Enum,
     "members": [
       {
         "id": 0,
