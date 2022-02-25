@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## [1.4.0-dev.0] - 2022-02-09
+## [1.4.0] - 2022-02-26
 ### Added
 - Update deps, support new schemas
 

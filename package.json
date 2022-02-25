@@ -1,6 +1,6 @@
 {
   "name": "tsrpc-proto",
-  "version": "1.4.0-dev.0",
+  "version": "1.4.0",
   "description": "TSRPC service proto definition",
   "main": "index.js",
   "exports": {
@@ -27,14 +27,14 @@
   "license": "MIT",
   "types": "index.d.ts",
   "devDependencies": {
-    "@microsoft/api-documenter": "^7.15.1",
+    "@microsoft/api-documenter": "^7.15.3",
     "@microsoft/api-extractor": "^7.19.4",
-    "rollup": "^2.67.1",
+    "rollup": "^2.68.0",
     "rollup-plugin-typescript2": "^0.31.2",
     "typescript": "^4.5.5"
   },
   "dependencies": {
-    "tsbuffer-schema": "^2.2.0-dev.1",
+    "tsbuffer-schema": "^2.2.0",
     "tslib": "*"
   }
 }
