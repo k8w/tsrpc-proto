@@ -9,3 +9,15 @@ export interface Logger {
     warn(...args: any[]): void;
     error(...args: any[]): void;
 }
+
+export type LogLevel = keyof Logger;
+
+const logOrder = ['debug', 'log', 'warn', 'error'] as const;
+
+export function setLogLevel(logger: Logger, logLevel: LogLevel) {
+    let order = logOrder.indexOf(logLevel);
+    for (let i = 0; i < logOrder.length; ++i) {
+        let level = logOrder[i];
+        logger[level] = i >= order ? logger[level] : () => { };
+    }
+}

@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## [1.4.1] - 2022-04-14
+### Added
+- `LogLevel` and `setLogLevel`
+
 ## [1.4.0] - 2022-02-26
 ### Added
 - Update deps, support new schemas

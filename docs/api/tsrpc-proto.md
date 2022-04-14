@@ -16,6 +16,12 @@
 |  --- | --- |
 |  [TsrpcErrorType](./tsrpc-proto.tsrpcerrortype.md) |  |
 
+## Functions
+
+|  Function | Description |
+|  --- | --- |
+|  [setLogLevel(logger, logLevel)](./tsrpc-proto.setloglevel.md) |  |
+
 ## Interfaces
 
 |  Interface | Description |
@@ -43,5 +49,6 @@
 |  Type Alias | Description |
 |  --- | --- |
 |  [ApiReturn](./tsrpc-proto.apireturn.md) | The return of <code>client.callApi()</code> |
+|  [LogLevel](./tsrpc-proto.loglevel.md) |  |
 |  [ServiceDef](./tsrpc-proto.servicedef.md) |  |
 
