@@ -10,12 +10,13 @@ export interface Logger {
     error(...args: any[]): void;
 }
 
-export type LogLevel = keyof Logger;
+export type LogLevel = 'debug' | 'info' | 'warn' | 'error';
 
 const logOrder = ['debug', 'log', 'warn', 'error'] as const;
 
 export function setLogLevel(logger: Logger, logLevel: LogLevel) {
-    let order = logOrder.indexOf(logLevel);
+    let level: (typeof logOrder)[number] = logLevel === 'info' ? 'log' : logLevel;
+    let order = logOrder.indexOf(level);
     for (let i = 0; i < logOrder.length; ++i) {
         let level = logOrder[i];
         logger[level] = i >= order ? logger[level] : () => { };

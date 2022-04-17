@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## [1.4.2] - 2022-04-17
+### Changed
+- Log level `log` renamed to `info`
+
 ## [1.4.1] - 2022-04-14
 ### Added
 - `LogLevel` and `setLogLevel`

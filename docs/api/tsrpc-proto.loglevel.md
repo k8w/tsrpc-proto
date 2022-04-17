@@ -7,7 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type LogLevel = keyof Logger;
+export declare type LogLevel = 'debug' | 'info' | 'warn' | 'error';
 ```
-<b>References:</b> [Logger](./tsrpc-proto.logger.md)
-

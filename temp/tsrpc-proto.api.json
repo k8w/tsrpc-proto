@@ -840,12 +840,7 @@
             },
             {
               "kind": "Content",
-              "text": "keyof "
-            },
-            {
-              "kind": "Reference",
-              "text": "Logger",
-              "canonicalReference": "tsrpc-proto!Logger:interface"
+              "text": "'debug' | 'info' | 'warn' | 'error'"
             },
             {
               "kind": "Content",
@@ -856,7 +851,7 @@
           "name": "LogLevel",
           "typeTokenRange": {
             "startIndex": 1,
-            "endIndex": 3
+            "endIndex": 2
           }
         },
         {
