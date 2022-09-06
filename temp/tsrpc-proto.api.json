@@ -840,7 +840,7 @@
             },
             {
               "kind": "Content",
-              "text": "'debug' | 'info' | 'warn' | 'error'"
+              "text": "'debug' | 'info' | 'warn' | 'error' | 'none'"
             },
             {
               "kind": "Content",
@@ -1380,8 +1380,9 @@
               "text": "): "
             },
             {
-              "kind": "Content",
-              "text": "void"
+              "kind": "Reference",
+              "text": "Logger",
+              "canonicalReference": "tsrpc-proto!Logger:interface"
             },
             {
               "kind": "Content",

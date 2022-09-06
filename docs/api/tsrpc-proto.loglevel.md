@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type LogLevel = 'debug' | 'info' | 'warn' | 'error';
+export declare type LogLevel = 'debug' | 'info' | 'warn' | 'error' | 'none';
 ```

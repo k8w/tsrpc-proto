@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function setLogLevel(logger: Logger, logLevel: LogLevel): void;
+export declare function setLogLevel(logger: Logger, logLevel: LogLevel): Logger;
 ```
 
 ## Parameters
@@ -19,5 +19,5 @@ export declare function setLogLevel(logger: Logger, logLevel: LogLevel): void;
 
 <b>Returns:</b>
 
-void
+[Logger](./tsrpc-proto.logger.md)
 
