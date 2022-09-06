@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## [1.4.3] - 2022-09-06
+- `logLevel` would not modify the original logger, and would make a copy instead.
+
 ## [1.4.2] - 2022-04-17
 ### Changed
 - Log level `log` renamed to `info`

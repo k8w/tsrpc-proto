@@ -10,15 +10,23 @@ export interface Logger {
     error(...args: any[]): void;
 }
 
-export type LogLevel = 'debug' | 'info' | 'warn' | 'error';
+export type LogLevel = 'debug' | 'info' | 'warn' | 'error' | 'none';
 
-const logOrder = ['debug', 'log', 'warn', 'error'] as const;
+const empty = () => { };
 
-export function setLogLevel(logger: Logger, logLevel: LogLevel) {
-    let level: (typeof logOrder)[number] = logLevel === 'info' ? 'log' : logLevel;
-    let order = logOrder.indexOf(level);
-    for (let i = 0; i < logOrder.length; ++i) {
-        let level = logOrder[i];
-        logger[level] = i >= order ? logger[level] : () => { };
+export function setLogLevel(logger: Logger, logLevel: LogLevel): Logger {
+    switch (logLevel) {
+        case 'none':
+            return { debug: empty, log: empty, warn: empty, error: empty };
+        case 'error':
+            return { debug: empty, log: empty, warn: empty, error: logger.error.bind(logger) };
+        case 'warn':
+            return { debug: empty, log: empty, warn: logger.warn.bind(logger), error: logger.error.bind(logger) };
+        case 'info':
+            return { debug: empty, log: logger.log.bind(logger), warn: logger.warn.bind(logger), error: logger.error.bind(logger) };
+        case 'debug':
+            return logger;
+        default:
+            throw new Error(`Invalid logLevel: '${logLevel}'`)
     }
 }
